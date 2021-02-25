@@ -11,6 +11,31 @@ function App() {
         password : "1234"
     };
     
+    const items=[{"description": "Work",
+                   "status": "In progress",
+                   "dueDate": 156464645646,
+                   "responsible": {
+                      "name": "Diego Chinchilla",
+                       "email": "diego@gmail.com"
+               }, 
+           },
+           {
+  	"description": "Play",
+  	"responsible": {
+  		"name": "Diego Chinchilla",
+  		"email": "diego@gmail.com"
+  	},
+  	"status": "ready",
+  	"dueDate": 156464645648
+  },
+  {"description": "Collage",
+  	"responsible": {
+  		"name": "Diego Chinchilla",
+  		"email": "diego@gmail.com"
+  	},
+  	"status": "Almost",
+  	"dueDate": 156464645648}];
+    
     
     localStorage.setItem("Username", userData.userName);
     localStorage.setItem("Password", userData.password);
@@ -39,7 +64,7 @@ function App() {
         window.location.href = "/";
     };
     
-    const items=[];
+    
     
     
     const LoginView = () => (<Login successfully={handleSuccessfullyLogin} failed={handleFailedLogin}/>);
